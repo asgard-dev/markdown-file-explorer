@@ -1,0 +1,90 @@
+@import "colors.less";
+
+/**
+ * CONTENT --
+ * 1. Layout
+ * 2. Texts, typography
+ * 3. Responsive behavior
+ */
+
+/* Layout */
+
+html, body {
+    width: 100%; min-height: 100%;
+    background-color: @darker-background;
+}
+.row {
+    margin: 0px;
+}
+div.pageinfo {
+    background-color: @darker-background;
+}
+div.content {
+    background-color: @lighter-background;
+}
+div.fullheight {
+    min-height: 100vh;
+    padding: 0px;
+}
+img.profile-image{
+    display: block;
+    width: 40%;
+    margin: 20% auto;
+}
+div.pageinfo main, div.pageinfo footer {
+    margin-top: 5%;
+    padding-top: 2%;
+    border-top: 1px solid @light-white-3;
+}
+
+div.pageinfo footer {
+    padding-bottom: 5%;
+}
+div.content main {
+    margin: 10%;
+}
+div.content footer {
+    padding: 2% 0%;
+    background-color: @darker-background;
+    display: none;
+}
+
+/* Texts, typography */
+
+div.pageinfo h1, div.pageinfo h2 {
+    color: @foreground;
+    text-align: center;
+}
+div.pageinfo h1 {
+    font-weight: 600;
+}
+div.pageinfo a.center {
+    color: @foreground;    
+    display: block;
+    text-align: center;
+}
+div.pageinfo a:hover, div.pageinfo a:hover i {
+    text-decoration: none;
+    color: @light-white-1;
+}
+div.pageinfo h2 {
+    color: @light-white-2;
+}
+
+span.match {
+    background-color: @match-color;
+}
+
+  /* Responsive behavior */
+
+  @media only screen and (max-width: 992px) {
+    div.fullheight {
+        min-height: 0px;
+    }
+    div.pageinfo footer {
+        display: none;
+    }
+    div.content footer {
+        display: block;
+    }
+}

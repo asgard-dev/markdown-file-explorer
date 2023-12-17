@@ -1,0 +1,54 @@
+@import "colors.less";
+
+ul.explorer {
+    list-style-type: none;
+}
+
+ul.explorer > li > p {
+    padding-left: 15px;
+}
+
+ul.explorer > li.expandable > p {
+    cursor: pointer;
+}
+
+ul.explorer p, ul.explorer a {
+    color: @foreground;
+}
+
+ul.explorer a:hover {
+    color: @foreground-lighter;
+}
+
+ul.explorer li.expandable > p {
+    background-image: url("expanded.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 10px;
+}
+
+ul.explorer li.explorer-collapsed > ul > li {
+    display: none;
+}
+ul.explorer li.explorer-collapsed > p {
+    background-image: url("collapsed.png");
+}
+
+ul.explorer p.selected {
+    background-color: @selection-color;
+    padding: 2px 5px;
+    color: @lighter-background;
+}
+
+p.selected::after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: -11px;
+    margin: -2px;
+    z-index: 1;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 13px solid #888;
+}

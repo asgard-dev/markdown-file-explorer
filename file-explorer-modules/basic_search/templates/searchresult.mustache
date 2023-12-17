@@ -1,0 +1,12 @@
+{{#results.length}}
+<h1>Search results for "{{query}}"</h1>
+
+{{#results}}
+---
+<a href="{{path}}" title="{{name}}"><h2>{{{name}}}</h2></a>
+{{{content}}}
+{{/results}}
+{{/results.length}}
+{{^results.length}}
+<h1>There are no results for "{{query}}"</h1>
+{{/results.length}}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="{{name}}">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- FontAwesome -->
+        <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+        <link rel="stylesheet/less" href="/resources/style.less" id="main">
+        <link rel="stylesheet/less" href="/resources/explorer.less" id="explorer">
+        
+        {{#styles}}
+        <link rel="stylesheet" href="/file-explorer-modules/{{path}}">
+        {{/styles}}
+
+        <!-- Less -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.0.0/less.min.js" ></script> 
+
+        <title>{{name}}</title>
+    </head>
+<body>
+<div class="fullheight container-fluid">
+    <div class="fullheight row">
+        <div class="fullheight pageinfo col-xs-12 col-md-4">
+            <header>
+                <a class="center" href="/"><h1>{{name}}</h1></a>
+            </header>
+            <main>
+                {{{widgets_lmt}}}
+                {{{explorer}}}
+            </main>
+            <footer>
+                {{{copyright}}}
+            </footer>
+        </div>
+        <div class="fullheight content col-xs-12 col-md-8">
+            <main>
+                {{{content}}}
+            </main>
+            <footer>
+                {{{copyright}}}
+            </footer>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/resources/explorer.js"></script>
+{{#scripts}}
+<script type="text/javascript" src="/file-explorer-modules/{{path}}"></script>
+{{/scripts}}
+</body>
+</html>

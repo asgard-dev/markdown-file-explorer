@@ -1,0 +1,25 @@
+{
+  "name": "markdown-file-explorer",
+  "version": "1.0.0",
+  "description": "This is a simple application which can turn a markdown directory structure to a webserver",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "start": "node index.js"
+  },
+  "author": "asgard-dev <thor@asgard.realm>, dadikovi <dadikovi@gmail.com> (dadikovi.github.io)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "assert": "^1.4.1",
+    "express": "^4.16.2",
+    "json": "^9.0.6",
+    "marked": "^0.3.17",
+    "mocha": "^5.0.5",
+    "mustache": "^2.3.0",
+    "simple-git": "^1.92.0"
+  },
+  "engines": {
+    "node": ">=4.2.4"
+  },
+  "devDependencies": {}
+}

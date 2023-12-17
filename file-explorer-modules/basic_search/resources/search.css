@@ -1,0 +1,23 @@
+/* Search */
+
+.search-container {
+    width: auto;
+    margin: 0px 40px 40px 40px;
+}
+.search-container button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    width: 2.2em;
+  }
+
+  .search-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 12em;
+  }

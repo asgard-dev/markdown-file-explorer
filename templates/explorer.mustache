@@ -1,0 +1,10 @@
+<ul class="explorer">
+{{#files}}	
+	<li {{#files}}class="expandable"{{/files}}>
+		{{#path}}<a href="{{path}}">{{/path}}
+		<p class="explorer-level {{#files.length}}expandable-label{{/files.length}} {{#isSelectedParent}}selectedParent{{/isSelectedParent}} {{#isSelected}}selected{{/isSelected}}"{{#files}} onclick="expand(this);"{{/files}}>{{name}}</p>
+		{{#path}}</a>{{/path}}
+		{{>explorer}}
+	</li>
+{{/files}}
+</ul>
